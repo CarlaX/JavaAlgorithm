@@ -14,12 +14,12 @@ public class Solution {
     boolean valid;
 
     public int[] findOrder(int numCourses, int[][] prerequisites) {
-        edges = new ArrayList<List<Integer>>();
+        edges = new ArrayList<>();
         visited = new int[numCourses];
         stack = new ArrayDeque<>();
         valid = true;
         for (int i = 0; i < numCourses; ++i) {
-            edges.add(new ArrayList<Integer>());
+            edges.add(new ArrayList<>());
         }
         for (int[] info : prerequisites) {
             edges.get(info[1]).add(info[0]);
